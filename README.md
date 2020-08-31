@@ -3,7 +3,7 @@
 
 Hoshino&amp;Yobot杂交包下载
 
-请遵守Hoshono/Yobot的开源协议
+请遵守Hoshono/Yobot/YoWhite的开源协议
 
 
 下载地址:https://drive.michikawachin.art/#/s/wg1Fg
