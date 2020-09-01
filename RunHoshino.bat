@@ -1,8 +1,6 @@
 @echo off
 Title=HoshinoBot console
 
-call=:Reset_path
-
 :loop
 call=:Reset_path
 cls
