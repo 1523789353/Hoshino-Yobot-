@@ -16,7 +16,6 @@ pip install -r "%temp%\requirements.txt"
 del=/s=/f=/q="%temp%\requirements.txt"
 (echo=依赖安装完成
 echo=请使用RunHoshino.bat启动)|msg %username% /time 180
-del=/s=/f=/q=%0
 exit
 ::=====Data=====::
 -----BEGIN CERTIFICATE-----
