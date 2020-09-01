@@ -1,2 +1,4 @@
-加入重启功能
+#加入重启功能
 https://github.com/Lancercmd/Reloader
+#加入卡池抽奖
+https://github.com/pcrbot/gacha
