@@ -5,8 +5,8 @@ Title=HoshinoBot console
 call=:Reset_path
 cls
 python run.py
-echo=将在3秒后自动重启
-ping -n 4 ::1 >nul
+echo=将在5秒后自动重启
+ping -n 6 ::1 >nul
 goto=loop
 
 ::=====Functions=====::

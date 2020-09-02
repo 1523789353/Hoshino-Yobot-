@@ -20,7 +20,7 @@ class Updater:
     def __init__(self, glo_setting: dict, bot_api: Api, *args, **kwargs):
         self.evn = glo_setting["verinfo"]["run-as"]
         self.path = glo_setting["dirname"]
-        self.working_path = os.path.abspath(".")
+        self.working_path = os.path.abspath('.\hoshino\modules\yobot\src\client')
         self.ver = glo_setting["verinfo"]
         self.setting = glo_setting
         self.api = bot_api

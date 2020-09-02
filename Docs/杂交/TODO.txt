@@ -1,2 +1,1 @@
-#加入重启功能
-https://github.com/Lancercmd/Reloader
+None
