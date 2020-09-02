@@ -8,7 +8,7 @@
 [HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot "Hoshino项目")<br>
 [Yobot](https://github.com/pcrbot/yobot "Yobot项目")<br>
 [Yowhite](https://github.com/shkongzhu/YoWhite "Yowhite项目")<br>
-[咖啡佬的抽奖模块](https://github.com/pcrbot/gacha "咖啡老的项目")
+[咖啡佬的抽奖模块](https://github.com/pcrbot/gacha "咖啡老的项目")<br>
 本项目遵循以上项目的开源协议<br>
 相关Markdown/Licence文档已移至Docs<br><br>
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
