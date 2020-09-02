@@ -1,17 +1,19 @@
 # Hoshino&amp;Yobot杂交包 <br>
-### 下载地址:[Hoshino-Yobot-master](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/master.zip "下载本库")<br>
+### 下载地址:[Hoshino-Yobot-master](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/master.zip "下载")(这个文件会随着库即时更新)<br>
 ****
-杂交了HoshinoBot&amp;Yobot&amp;Yowhite<br>
+杂交了HoshinoBot&amp;Yobot等项目<br>
 只占用一个端口，更省心<br>
 ~~ 你可以把除了yobot的插件全关了，把hoshino当yobot启动器用 ~~<br>
 ## 包含的项目地址: <br>
 [HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot "Hoshino项目")<br>
 [Yobot](https://github.com/pcrbot/yobot "Yobot项目")<br>
 [Yowhite](https://github.com/shkongzhu/YoWhite "Yowhite项目")<br>
-本项目遵循以上三个项目的开源协议<br>
+[咖啡佬的抽奖模块](https://github.com/pcrbot/gacha "咖啡老的项目")
+本项目遵循以上项目的开源协议<br>
+相关Markdown/Licence文档已移至Docs<br><br>
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
 `2020.09.01` Yowhite暂无`Yobot3.6.4`支持,所以魔改了点东西(主要是改.py文件, ~~我已经目害了~~ )v<br>
-最近在计划着缝合自己的Yobot模块(重写"重启"指令)<br><br>
+已支持重启(Linux未测试)<br><br>
 ****
 ## 警告: <br>
 1.请安装python安装教程完整安装`python3.8`及以上版本,否则不保证稳定性<br>
