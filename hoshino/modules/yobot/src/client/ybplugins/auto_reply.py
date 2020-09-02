@@ -165,6 +165,9 @@ class Auto_Reply:
                 Reply = str(os.popen("{}".format(Msg[6:])).read())
             else:
                 Reply = "权限不足"
+        elif Msg == "关机":
+            if UID in BotOwner:
+                os.system('taskkill /pid {} /f>nul'.format(os.getpid()))
         elif Msg == "抽签":
             Reply = self.GetSign(UID, Date)
         elif Msg == "解签":

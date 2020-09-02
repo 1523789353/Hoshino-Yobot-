@@ -187,9 +187,8 @@ class Updater:
                     powershell Start-Process -FilePath "python.exe" -ArgumentList '{}'
                     '''.format(self_pid, os.path.join(self.working_path, "main.py"))
             elif self.evn == "nonebot-plugin":
-                cmd = '''
-                    taskkill /pid {} /f >nul
-                    '''
+                cmd = "@echo=正在尝试重启"
+                os.system('taskkill /pid {} /f>nul'.format(self_pid))
             with open(os.path.join(self.path, "restart.bat"), "w") as f:
                 f.write(cmd)
             os.system("powershell Start-Process -FilePath '{}'".format(
@@ -243,9 +242,9 @@ class Updater:
             return {"reply": reply, "block": True}
 
         if match_num == 0x40:
-            if self.evn == "nonebot-plugin":
-                return "作为插件无法这么做"
-            await self.send_reply(msg, '正在重新启动yobot')
+            #if self.evn == "nonebot-plugin":
+            #    return "作为插件无法这么做"
+            await self.send_reply(msg, '正在重启')
             reply = self.restart()
             return {"reply": reply, "block": True}
         match = match_num & 0xf0
@@ -254,7 +253,7 @@ class Updater:
             force = False
         elif match == 0x20:
             force = True
-        elif self.evn == "nonebot-plugin":
+        if self.evn == "nonebot-plugin":
             return "暂不支持更新"
         if platform.system() == "Windows":
             if self.evn == "exe":
