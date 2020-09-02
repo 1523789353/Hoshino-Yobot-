@@ -18,9 +18,9 @@
 ## 警告: <br>
 1.请安装python安装教程完整安装`python3.8`及以上版本,否则不保证稳定性<br>
 &nbsp;&nbsp;&nbsp;可以前往[教程](./Docs/杂交/Install_python3.8.5/Install_Tip.md "傻瓜式安装教程")查看傻瓜式安装教程<br>
-2.安装requirements.txt时请不要使用第三方下载源,否则可能出现插件缺失 ~~(尤其是清华源)~~ <br>
-&nbsp;&nbsp;&nbsp;本包提供Windows的requirements一键安装部署,请善用`第一次使用.bat`脚本<br>
-&nbsp;&nbsp;&nbsp;当然，需要requirements.txt的也可以到`./Docs/杂交`里去找<br>
+2.本包提供Windows的requirements一键安装部署,请善用`第一次使用.bat`脚本,不建议手动安装 ~~(经常有铁憨憨装不齐)~~ <br>
+&nbsp;&nbsp;&nbsp;需要requirements.txt的也可以到`./Docs/杂交`里去找<br>
+&nbsp;&nbsp;&nbsp;手动安装requirements.txt时请不要使用第三方下载源 ~~(尤其是清华源)~~ <br>
 ****
 ## 相关项目地址 <br>
 [MiraiOK](https://github.com/LXY1226/MiraiOK "MiraiOK项目")<br>
