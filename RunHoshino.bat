@@ -4,7 +4,7 @@ Title=HoshinoBot console
 :loop
 call=:Reset_path
 cls
-python %cd%\run.py
+python run.py
 echo=将在3秒后自动重启
 ping -n 4 ::1 >nul
 goto=loop

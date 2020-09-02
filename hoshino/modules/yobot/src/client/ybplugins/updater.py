@@ -186,6 +186,10 @@ class Updater:
                     ping 127.0.0.1 -n 3 >nul
                     powershell Start-Process -FilePath "python.exe" -ArgumentList '{}'
                     '''.format(self_pid, os.path.join(self.working_path, "main.py"))
+            elif self.evn == "nonebot-plugin":
+                cmd = '''
+                    taskkill /pid {} /f >nul
+                    '''
             with open(os.path.join(self.path, "restart.bat"), "w") as f:
                 f.write(cmd)
             os.system("powershell Start-Process -FilePath '{}'".format(
@@ -219,8 +223,8 @@ class Updater:
         return match | ver
 
     async def execute_v2(self, match_num: int, msg: dict = {}) -> dict:
-        if self.evn == "nonebot-plugin":
-            return "作为插件无法这么做"
+        #if self.evn == "nonebot-plugin":
+        #    return "作为插件无法这么做"
 
         super_admins = self.setting.get("super-admin", list())
         restrict = self.setting.get("setting-restrict", 3)
@@ -250,6 +254,8 @@ class Updater:
             force = False
         elif match == 0x20:
             force = True
+        elif self.evn == "nonebot-plugin":
+            return "暂不支持更新"
         if platform.system() == "Windows":
             if self.evn == "exe":
                 await self.send_reply(msg, '开始自动下载更新')
