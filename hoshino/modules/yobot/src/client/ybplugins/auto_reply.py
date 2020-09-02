@@ -167,7 +167,14 @@ class Auto_Reply:
                 Reply = "权限不足"
         elif Msg == "关机":
             if UID in BotOwner:
-                os.system('taskkill /pid {} /f>nul'.format(os.getpid()))
+                if platform.system() == "Windows":
+                    #os.system('taskkill /im cmd.exe /f'.format(os.getpid()))
+                    #os.system('taskkill /pid {} /f>nul'.format(os.getpid()))
+                    sys.exit(10)
+                else:
+                    #os.system('kill -9 bash'.format(self_pid))
+                    #os.system('kill -9 {}'.format(self_pid))
+                    sys.exit(10)
         elif Msg == "抽签":
             Reply = self.GetSign(UID, Date)
         elif Msg == "解签":

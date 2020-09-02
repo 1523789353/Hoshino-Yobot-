@@ -195,7 +195,10 @@ class Updater:
                       os.path.join(self.path, "restart.bat")))
             sys.exit(10)
         else:
-            open('.YOBOT_RESTART', 'w').close()
+            if self.evn == "nonebot-plugin":
+                os.system('kill -9 {}'.format(self_pid))
+            else:
+                open('.YOBOT_RESTART', 'w').close()
             sys.exit(10)
 
     @staticmethod
