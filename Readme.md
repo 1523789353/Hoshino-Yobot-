@@ -3,7 +3,7 @@
 ****
 杂交了HoshinoBot&amp;Yobot等项目<br>
 只占用一个端口，更省心<br>
-~~ 你可以把除了yobot的插件全关了，把hoshino当yobot启动器用 ~~<br>
+ ~~你可以把除了yobot的插件全关了，把hoshino当yobot启动器用~~ <br>
 ## 包含的项目地址: <br>
 [HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot "Hoshino项目")<br>
 [Yobot](https://github.com/pcrbot/yobot "Yobot项目")<br>
