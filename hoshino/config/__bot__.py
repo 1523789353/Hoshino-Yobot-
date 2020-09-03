@@ -6,15 +6,22 @@
 # hoshino监听的端口与ip
 PORT = 80
 HOST = '127.0.0.1'      # 本地部署使用此条配置（QQ客户端和bot端运行在同一台计算机）
+# HOST = '172.17.0.1'   # linux + docker使用此条配置
+# docker桥的ip可能随环境不同而有变化
+# 使用这行命令`ip addr show docker0 | grep -Po 'inet \K[\d.]+'`查看你的docker桥ip
+# HOST = '172.18.0.1'   # 阿里云的linux + docker多数情况是这样
 # HOST = '0.0.0.0'      # 开放公网访问使用此条配置（不安全）
 
 DEBUG = False           # 调试模式
 
-SUPERUSERS = [10000]    # 填写超级用户的QQ号，可填多个用半角逗号","隔开
+SUPERUSERS = [10000]    # 填写机器人所有者的QQ号，可填多个用半角逗号","隔开
+PYS={}    #机器人管理员QQ号,权限略小于所有者
 NICKNAME = ''           # 机器人的昵称。呼叫昵称等同于@bot，可用元组配置多个昵称
 
 COMMAND_START = {''}    # 命令前缀（空字符串匹配任何消息）
 COMMAND_SEP = set()     # 命令分隔符（hoshino不需要该特性，保持为set()即可）
+
+USE_CQPRO = True       # 是否使用Pro版酷Q功能
 
 # 发送图片的协议
 # 可选 http, file, base64
@@ -43,4 +50,17 @@ MODULES_ON = {
     # 'translate',
     # 'twitter',
     'yobot',
+    #'generator',
+    #'hourcallyao',
+    #'flac',
+    #'hourcallyaojp',
+    #'tencent_ai_reply',
+    #'vortune',
+    #'boxcolle',
+    #'timeline',
+    #'hiumsentences',
+    #'epck',
+    #'eqa',
+    #'Russian_roulette',
+    #'aircon'
 }
