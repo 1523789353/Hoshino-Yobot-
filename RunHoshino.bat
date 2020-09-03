@@ -1,5 +1,7 @@
 @echo off
 Title=HoshinoBot console
+::=====Hide Windows=====::
+if "%1" == "-Hide" start mshta vbscript:createobject("wscript.shell").run("""%0"" h",0)(window.close)&&exit
 
 :loop
 call=:Reset_path
