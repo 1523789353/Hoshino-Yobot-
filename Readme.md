@@ -21,6 +21,7 @@
 2.本包提供Windows的requirements一键安装部署,请善用`第一次使用.bat`脚本,不建议手动安装 ~~(经常有铁憨憨装不齐)~~ <br>
 &nbsp;&nbsp;&nbsp;需要requirements.txt的也可以到`./Docs/杂交`里去找<br>
 &nbsp;&nbsp;&nbsp;手动安装requirements.txt时请不要使用第三方下载源 ~~(尤其是清华源)~~ <br>
+3.dev分支为测试分支,不建议日常使用
 ****
 ## 相关项目地址 <br>
 [MiraiOK](https://github.com/LXY1226/MiraiOK "MiraiOK项目")<br>
