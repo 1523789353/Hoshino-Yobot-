@@ -1,5 +1,6 @@
 # Hoshino&amp;Yobot杂交包 <br>
-### 下载地址:[Hoshino-Yobot-master](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/master.zip "下载")(这个文件会随着库即时更新)<br>
+# 此分支为开发测试分支,日常使用请用master分支
+### dev分支下载地址:[Hoshino-Yobot-master](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/dev.zip "下载")(这个文件会随着库即时更新)<br>
 ****
 杂交了HoshinoBot&amp;Yobot等项目<br>
 只占用一个端口，更省心<br>
@@ -21,6 +22,7 @@
 2.本包提供Windows的requirements一键安装部署,请善用`第一次使用.bat`脚本,不建议手动安装 ~~(经常有铁憨憨装不齐)~~ <br>
 &nbsp;&nbsp;&nbsp;需要requirements.txt的也可以到`./Docs/杂交`里去找<br>
 &nbsp;&nbsp;&nbsp;手动安装requirements.txt时请不要使用第三方下载源 ~~(尤其是清华源)~~ <br>
+
 ****
 ## 相关项目地址 <br>
 [MiraiOK](https://github.com/LXY1226/MiraiOK "MiraiOK项目")<br>
