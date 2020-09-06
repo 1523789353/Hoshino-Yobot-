@@ -6,9 +6,10 @@ import time
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urljoin
-
+import urllib.request
+from PIL import Image
+from io import StringIO
 import aiohttp
-
 from .templating import render_template
 from .yobot_exceptions import ServerError
 
@@ -82,7 +83,7 @@ class Consult:
             item = self.nickname_dict.get(index.lower(), None)
             if item is None:
                 if is_retry:
-                    msg = "没有找到【{}】，目前昵称表：{}".format(
+                    msg = "没有找到[{}],目前昵称表：{}".format(
                         index, self.Nicknames_repo)
                     asyncio.ensure_future(self.update_nicknames())
                     raise ValueError(msg)
@@ -92,10 +93,10 @@ class Consult:
             def_set.add(item)
         def_lst = list(def_set)
         if len(def_lst) < 5:
-            raise ValueError("需要完整的5人防守队伍")
+            raise ValueError("需要5人防守队伍")
         return def_lst
 
-    async def jjcsearch_async(self, def_lst, region):
+    async def jjcsearch_async(self, def_lst, region,msg):
         search_source = self.setting["jjc_search"]
         try:
             if search_source == "nomae.net":
@@ -127,10 +128,43 @@ class Consult:
             self.setting['public_address'],
             '{}output/{}'.format(
                 self.setting['public_basepath'], filename))
-        reply = '找到{}条解法：{}'.format(len(result), addr)
+        reply = '找到{}条解法：\n{}'.format(len(result), addr);
         if self.setting['web_mode_hint']:
             reply += '\n\n如果无法打开，请仔细阅读教程中《链接无法打开》的说明'
-        return reply
+        if "group_id" in msg:
+            reply = self.jjcimgconcat(result,reply);
+        return reply;
+
+    def jjcimgconcat(self,result,reply):
+        base_img = Image.open(os.path.join(self.output_foler, 'resource/icon/unit/base.jpg'))
+        num = 5;
+        if len(result)<num:
+            num = len(result);
+        for idx in range(0,num):
+            team = result[idx];
+            i = 0;
+            fileName = '';
+            for img in team.team:
+                fileName += str(img.char_id);
+                fileName += '_';
+            fileName += '.jpg';
+            if os.path.exists(os.path.join(self.output_foler,fileName)):
+                reply += "[CQ:image,file={}]".format(os.path.join(self.output_foler, fileName));
+                reply += '👍:{},👎:{}\n🕒:{}'.format(str(team.good),str(team.bad),str(team.time));
+            else:
+                try:
+                    for img in team.team:
+                        img = Image.open(os.path.join(self.output_foler, 'resource/icon/unit/{}31.jpg'.format(img.char_id)))
+                        img = img.resize((80,80))
+                        base_img.paste(img, [i*80,0]);
+                        i=i+1
+                    #fileName = '{}.jpg'.format(self.output_num, random.randint(0, 999));
+                    base_img.save(os.path.join(self.output_foler, fileName));
+                    reply += "[CQ:image,file={}]".format(os.path.join(self.output_foler, fileName));
+                    reply += '👍:{},👎:{}\n🕒:{}'.format(str(team.good),str(team.bad),str(team.time));
+                except IOError:
+                    print("Error: 没有找到文件或读取文件失败")
+        return reply;
 
     def _parse_nomae_team(self, team) -> Solution:
         if team['equip'] is None:
@@ -174,9 +208,9 @@ class Consult:
             retry -= 1
             try:
                 async with aiohttp.request(
-                    'POST',
-                    'https://nomae.net/princess_connect/public/_arenadb/receive.php',
-                    headers=headers,
+                        'POST',
+                        'https://nomae.net/princess_connect/public/_arenadb/receive.php',
+                        headers=headers,
                         data=req) as resp:
                     restxt = await resp.text()
             except aiohttp.ClientError as e:
@@ -215,10 +249,10 @@ class Consult:
                    "page": 1, "sort": 1, "ts": int(time.time()), "region": region}
         try:
             async with aiohttp.request(
-                'POST',
-                'https://api.pcrdfans.com/x/v1/search',
-                headers=headers,
-                json=payload,
+                    'POST',
+                    'https://api.pcrdfans.com/x/v1/search',
+                    headers=headers,
+                    json=payload,
             ) as resp:
                 restxt = await resp.text()
         except aiohttp.ClientError as e:
@@ -262,7 +296,7 @@ class Consult:
                 anlz = self.user_input(msg["raw_message"][5:])
             except ValueError as e:
                 return str(e)
-            reply = await self.jjcsearch_async(anlz, match_num)
+            reply = await self.jjcsearch_async(anlz, match_num,msg)
         return {
             "reply": reply,
             "block": True
