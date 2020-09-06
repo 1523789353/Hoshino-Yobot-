@@ -46,10 +46,10 @@ MODULES_ON = {
     # 'mikan',
     'pcrclanbattle',
     'priconne',
-    # 'setu',
     # 'translate',
     # 'twitter',
     'yobot',
+    #'shebot'
     #'generator',
     #'hourcallyao',
     #'flac',

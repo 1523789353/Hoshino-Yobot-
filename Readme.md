@@ -1,6 +1,6 @@
 # Hoshino&amp;Yobot杂交包 <br>
 # 此分支为开发测试分支,日常使用请用master分支
-### dev分支下载地址:[Hoshino-Yobot-master](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/dev.zip "下载")(这个文件会随着库即时更新)<br>
+### dev分支下载地址:[Hoshino-Yobot-dev](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/dev.zip "下载")(这个文件会随着库即时更新)<br>
 ****
 杂交了HoshinoBot&amp;Yobot等项目<br>
 只占用一个端口，更省心<br>
@@ -10,6 +10,7 @@
 [Yobot](https://github.com/pcrbot/yobot "Yobot项目")<br>
 [Yowhite](https://github.com/shkongzhu/YoWhite "Yowhite项目")<br>
 [咖啡佬的抽奖模块](https://github.com/pcrbot/gacha "咖啡老的项目")<br>
+[plugins-for-Hoshino(shebot)](https://github.com/pcrbot/plugins-for-Hoshino "shebot项目")
 本项目遵循以上项目的开源协议<br>
 相关Markdown/Licence文档已移至Docs<br><br>
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
