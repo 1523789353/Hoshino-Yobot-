@@ -13,7 +13,8 @@
 相关Markdown/Licence文档已移至Docs<br><br>
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
 `2020.09.01` Yowhite暂无`Yobot3.6.4`支持,所以魔改了点东西(主要是改.py文件, ~~我已经目害了~~ )<br>
-已支持重启(Linux未测试)<br><br>
+*已支持重启(Linux未测试)<br>
+*新增码云镜像库<br><br>
 ****
 ## 警告: <br>
 1.请安装python安装教程完整安装`python3.8`及以上版本,否则不保证稳定性<br>
