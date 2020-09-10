@@ -15,7 +15,8 @@
 相关Markdown/Licence文档已移至Docs<br><br>
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
 `2020.09.01` Yowhite暂无`Yobot3.6.4`支持,所以魔改了点东西(主要是改.py文件, ~~我已经目害了~~ )<br>
-*已支持重启(Linux未测试)<br>
+*Linux支持直接运行run.sh(你想打python3 run.sh也是可以的)<br>
+*已支持重启(Linux请使用Runhoshino.sh启动以启用自动重启)<br>
 *新增码云镜像库<br><br><br>
 ****
 ## 警告: <br>

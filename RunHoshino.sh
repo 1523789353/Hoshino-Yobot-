@@ -4,7 +4,7 @@ Reset_path(){
 };
 Main_loop(){
     Reset_path
-    python run.py
+    python3 run.sh
     echo 将在3秒后自动重启
     sleep 3
     Main_loop
