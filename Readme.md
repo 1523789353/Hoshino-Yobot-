@@ -20,7 +20,7 @@ Linux请使用`第一次使用.sh`与`run.sh`或`RunHoshino.sh`(run.sh不支持�
 `2020.09.01` Yowhite暂无`Yobot3.6.4`支持,所以魔改了点东西(主要是改.py文件, ~~我已经目害了~~ )<br>
 *Linux支持直接运行run.sh(你想打python3 run.sh也是可以的)*<br>
 *已支持重启指令(Linux请使用Runhoshino.sh启动以启用重启指令)*<br>
-*新增码云镜像库*<br><br><br>
+*新增[码云镜像库](https://gitee.com/a1523789353/Hoshino-Yobot "镜像库")*<br><br><br>
 ****
 ## 警告: <br>
 1.请安装python安装教程完整安装`python3.8`及以上版本,否则不保证稳定性<br>
