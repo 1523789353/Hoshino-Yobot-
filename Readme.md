@@ -2,6 +2,9 @@
 # 此分支为开发测试分支,日常使用请用master分支
 ### dev分支下载地址:[Hoshino-Yobot-dev](http://github-proxy.yobot.win/1523789353/Hoshino-Yobot/archive/dev.zip "下载")(这个文件会随着库即时更新)<br>
 ****
+Windows请使用`第一次使用.bat`与`RunHoshino.bat`
+Linux请使用`第一次使用.sh`与`run.sh`或`RunHoshino.sh`(run.sh不支持重启指令)
+****
 杂交了HoshinoBot&amp;Yobot等项目<br>
 只占用一个端口，更省心<br>
  ~~你可以把除了yobot的插件全关了，把hoshino当yobot启动器用~~ <br>
@@ -16,7 +19,7 @@
 另外,若Yowhite项目长期不更新&nbsp;将改用[Yocool](https://github.com/A-kirami/YoCool/tree/master/PrincessAdventure "Yocool项目")方案<br><br>
 `2020.09.01` Yowhite暂无`Yobot3.6.4`支持,所以魔改了点东西(主要是改.py文件, ~~我已经目害了~~ )<br>
 *Linux支持直接运行run.sh(你想打python3 run.sh也是可以的)<br>
-*已支持重启(Linux请使用Runhoshino.sh启动以启用自动重启)<br>
+*已支持重启指令(Linux请使用Runhoshino.sh启动以启用重启指令)<br>
 *新增码云镜像库<br><br><br>
 ****
 ## 警告: <br>
